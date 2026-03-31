@@ -13,6 +13,14 @@ Architecture, workflows, and security controls are accurate, but specific values
 - Maintain a reusable VM layout for SOC / blue-team and vuln-testing workflows
 - Provide clear documentation + screenshots for reproducibility
 
+## Current Progress
+
+- Proxmox installed and configured
+- Network segmentation design in progress
+- Preparing pfSense deployment
+- Building foundation for SIEM and detection lab
+
+
 ## Network Diagram
 <img src="https://github.com/kvntynito/P1-1-proxmox-segmentation-lab/blob/main/diagrams/repo1-network-diagram.png?raw=true" alt="Proxmox Segmentation Lab Network Diagram" width="950">
 
