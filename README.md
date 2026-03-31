@@ -113,7 +113,7 @@ Planned documentation + screenshots:
 - NAT: `screenshots/pfsense-nat.png`
 - VM list: `screenshots/vm-list.png`
 
-## Repro Steps (High Level)
+## Reproduction Steps (High Level)
 1. Create Proxmox bridges: vmbr0 (WAN), vmbr1 (LAN1), vmbr2 (LAN2)
 2. Deploy pfSense VM with 3 NICs mapped to those bridges
 3. Configure pfSense interfaces + DHCP scopes for LAN1/LAN2
