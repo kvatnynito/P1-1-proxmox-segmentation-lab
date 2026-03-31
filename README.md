@@ -50,7 +50,7 @@ Architecture, workflows, and security controls are accurate, but specific values
 | LAN1 (Enterprise) | 10.10.10.0/24 | 10.10.10.1 | AD + endpoints + SIEM |
 | LAN2 (Vulnerable) | 10.20.20.0/24 | 10.20.20.1 | Vuln targets + scanners |
 
-Full details: `docs/ip-addressing.md`
+Full details: [IP Addressing](docs/ip-addressing.md)
 
 ## VM Inventory
 
@@ -91,7 +91,7 @@ Full details: `docs/ip-addressing.md`
 ### How I use these zones
 I treat **LAN1** as the “production-like” environment where identity, endpoints, and monitoring live, and **LAN2** as a controlled risk zone for vulnerable targets and scanning. Segmentation is enforced at pfSense with a deny-by-default posture between LANs, and I only allow specific flows when a lab scenario requires it (e.g., scanner-to-target traffic or admin/testing access).
 
-Full list: `docs/vm-inventory.md`
+Full list: [VM Inventory](docs/vm-inventory.md)
 
 ## Firewall Policy (Planned / Target State)
 **Default stance:** deny-by-default between LANs; allow only what is required.
@@ -103,7 +103,7 @@ Example rules:
 - LAN1 → LAN2: allow limited (admin/testing only; e.g., OpenVAS → targets)
 
 Planned documentation + screenshots:
-- `docs/firewall-policy.md`
+[Firewall Policy](docs/firewall-policy.md)
 - `screenshots/pfsense-firewall-rules.png`
 
 ## Planned Evidence (Screenshots)
@@ -113,7 +113,7 @@ Planned documentation + screenshots:
 - NAT: `screenshots/pfsense-nat.png`
 - VM list: `screenshots/vm-list.png`
 
-## Reproduction Steps (High Level)
+## Build Sequence (High Level)
 1. Create Proxmox bridges: vmbr0 (WAN), vmbr1 (LAN1), vmbr2 (LAN2)
 2. Deploy pfSense VM with 3 NICs mapped to those bridges
 3. Configure pfSense interfaces + DHCP scopes for LAN1/LAN2
@@ -121,9 +121,9 @@ Planned documentation + screenshots:
 5. Deploy VMs into LAN1 or LAN2 per inventory
 
 Walkthrough docs:
-- `docs/proxmox-bridges.md`
-- `docs/pfsense-config.md`
-- `docs/build-notes.md`
+- [Proxmox Bridges](docs/proxmox-bridges.md)
+- [pfSense Configuration](docs/pfsense-config.md)
+- [Build Notes](docs/build-notes.md)
 
 ## What’s Next
 This repo is the foundation for:
