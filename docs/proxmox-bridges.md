@@ -2,6 +2,8 @@
 
 To support network segmentation, this lab uses multiple Proxmox bridges to simulate separate network zones.
 
+This file answers the question: how it should be configured.
+
 ### vmbr0 (WAN)
 - Connected to home router
 - Provides internet access
