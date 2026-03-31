@@ -1,5 +1,7 @@
 # PfSense-Configuration
 
+This file will have the final configuration.
+
 ## Planned Interface Mapping
 
 - WAN → vmbr0
