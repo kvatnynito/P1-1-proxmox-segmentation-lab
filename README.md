@@ -3,6 +3,12 @@
 ## Overview
 This repo documents a segmented Proxmox homelab designed to mimic an enterprise environment. The lab uses **pfSense as the edge firewall/router** with **multiple Proxmox bridges** to separate traffic into distinct security zones (Enterprise LAN vs Vulnerable LAN), enabling realistic security testing, monitoring, and containment scenarios.
 
+## Lab Build Guide
+
+For step-by-step implementation, start here:
+
+[docs/00-lab-guide.md](docs/00-lab-guide.md)
+
 ## Sanitization Note
 To reduce risk, this repo uses **representative** IP ranges, hostnames, and identifiers.  
 Architecture, workflows, and security controls are accurate, but specific values may be modified for privacy/security.
@@ -15,10 +21,7 @@ Architecture, workflows, and security controls are accurate, but specific values
 
 ## Current Progress
 
-- Proxmox installed and configured
-- Network segmentation design in progress
-- Preparing pfSense deployment
-- Building foundation for SIEM and detection lab
+> Status: Architecture and documentation are complete; infrastructure implementation begins with pfSense deployment.
 
 
 ## Network Diagram
@@ -90,7 +93,7 @@ I treat **LAN1** as the “production-like” environment where identity, endpoi
 
 Full list: `docs/vm-inventory.md`
 
-## Firewall Policy (What I enforced)
+## Firewall Policy (Planned / Target State)
 **Default stance:** deny-by-default between LANs; allow only what is required.
 
 Example rules:
@@ -99,11 +102,11 @@ Example rules:
 - LAN2 → LAN1: deny (block lateral movement by default)
 - LAN1 → LAN2: allow limited (admin/testing only; e.g., OpenVAS → targets)
 
-Details + screenshots:
+Planned documentation + screenshots:
 - `docs/firewall-policy.md`
 - `screenshots/pfsense-firewall-rules.png`
 
-## Evidence (Screenshots)
+## Planned Evidence (Screenshots)
 - Proxmox bridges: `screenshots/proxmox-bridges.png`
 - pfSense interfaces: `screenshots/pfsense-interfaces.png`
 - Firewall rules: `screenshots/pfsense-firewall-rules.png`
