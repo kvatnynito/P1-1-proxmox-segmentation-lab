@@ -1,6 +1,6 @@
 # PfSense-Configuration
 
-This file will have the final configuration.
+Currently in deployment phase. This file will have the final configuration.
 
 ## Planned Interface Mapping
 
