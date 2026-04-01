@@ -30,8 +30,10 @@ This file answers the question: how it should be configured.
 
 ### Design Purpose
 
-These bridges allow pfSense to act as the central routing and security enforcement point between networks, enabling:
+These virtual bridges (aka virtual switches) allow pfSense to act as the central routing and security enforcement point between networks, enabling:
 
 - Network segmentation
 - Controlled communication between zones
 - Realistic enterprise security scenarios
+
+where pfSense is using 3 NICs to interface these bridges together.
