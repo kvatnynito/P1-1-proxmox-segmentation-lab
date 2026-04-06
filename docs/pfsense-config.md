@@ -27,8 +27,8 @@ FW-EDGE01 serves as the lab’s edge firewall/router and enforces segmentation b
 
 ## Week 2 Configuration Goals
 
-- [ ] Validate pfSense boots successfully
-- [ ] Confirm interface assignments match design
+- [x] Validate pfSense boots successfully
+- [x] Confirm interface assignments match design
 - [ ] Access pfSense web UI
 - [ ] Confirm LAN1 interface IP configuration
 - [ ] Confirm LAN2 interface IP configuration
