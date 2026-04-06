@@ -146,7 +146,7 @@ Planned documentation + screenshots:
 - `screenshots/pfsense-firewall-rules.png`
 
 ## Current Evidence (Screenshots)
-### Proxmox bridge layout
+- Proxmox bridge layout
 ![Proxmox bridge layout](screenshots/proxmox-bridges.png)
 
 - pfSense interfaces: `screenshots/pfsense-interfaces.png`
