@@ -29,7 +29,7 @@ Architecture, workflows, and security controls are accurate, but specific values
 > - Interface mapping established:
 >   - WAN -> vmbr0
 >   - LAN1 -> vmbr1
->   - LAN2 -> vmbr2
+>   - LAN2 (OPT1 in pfsense) -> vmbr2
 >
 > Next:
 > - Confirm web UI access
