@@ -28,6 +28,6 @@ FW-EDGE01 serves as the lab’s edge firewall/router and enforces segmentation b
 - Web UI validation, DHCP scope configuration, and firewall rule validation are part of Week 2
 
 ## Evidence
-![pfSense installation complete](screenshots/pfsense-install-complete.png)
-![pfSense interface assignment](screenshots/pfsense-interface-assignment.png)
-![pfSense console interfaces](screenshots/pfsense-console-interfaces.png)
+![pfSense installation complete](../screenshots/pfsense-install-complete.png)
+![pfSense interface assignment](../screenshots/pfsense-interface-assignment.png)
+![pfSense console interfaces](../screenshots/pfsense-console-interfaces.png)
