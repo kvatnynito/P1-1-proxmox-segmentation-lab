@@ -63,7 +63,7 @@ Outcome:
 The lab now has a routed segmentation point in place and is ready for Week 2 validation and DHCP configuration.
 
 ## Network Diagram
-<img src="https://github.com/kvntynito/P1-1-proxmox-segmentation-lab/blob/main/diagrams/repo1-network-diagram.png?raw=true" alt="Proxmox Segmentation Lab Network Diagram" width="950">
+![Network diagram](screenshots/proxmox-network-diagram.png)
 
 **Design intent:** FW-EDGE01 (pfSense) provides WAN access and enforces segmentation between **LAN1 (enterprise/blue-team)** and **LAN2 (vulnerable/testing)**.  
 
