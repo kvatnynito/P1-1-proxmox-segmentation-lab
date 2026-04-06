@@ -149,10 +149,14 @@ Planned documentation + screenshots:
 ### Proxmox bridge layout:
 ![Proxmox bridge layout](screenshots/proxmox-bridges.png)
 
-### pfSense Installation:
+### pfSense installation:
   
 ![pfSense installation begin](screenshots/pfsense-install-begin.png)
 ![pfSense installation complete](screenshots/pfsense-install-complete.png)
+
+### pfSense interface assignment
+
+![pfSense interface assignment](screenshots/pfsense-interface-assignment.png)
 
 ### pfSense interfaces:
   
