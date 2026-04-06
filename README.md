@@ -44,6 +44,23 @@ Architecture, workflows, and security controls are accurate, but specific values
 - [ ] Week 4: Kali + vulnerable VM base connectivity
 - [ ] Week 5: Splunk deployment
 
+## Week 1 Summary (Completed April 6, 2026)
+Objective: Deploy pfSense as the lab edge firewall/router
+
+Completed:
+- Prepared repo and core documentation
+- Confirmed Proxmox host/network readiness
+- Deployed pfSense VM
+- Mapped interfaces to:
+  - vmbr0 (WAN)
+  - vmbr1 (LAN1 Enterprise)
+  - vmbr2 (LAN2 Vulnerable)
+- Assigned initial LAN addressing:
+  - 10.10.10.1/24
+  - 10.20.20.1/24
+
+Outcome:
+The lab now has a routed segmentation point in place and is ready for Week 2 validation and DHCP configuration.
 
 ## Network Diagram
 <img src="https://github.com/kvntynito/P1-1-proxmox-segmentation-lab/blob/main/diagrams/repo1-network-diagram.png?raw=true" alt="Proxmox Segmentation Lab Network Diagram" width="950">
