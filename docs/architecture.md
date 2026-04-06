@@ -4,7 +4,7 @@
 
 This lab is designed as a small segmented environment built in Proxmox.
 
-The main idea is to avoid placing every system on one flat network. Instead, the environment is separated into different zones so that systems can be grouped by purpose and trust level. This makes the lab more realistic and supports safer testing, better organization, and clearer future monitoring workflows.
+The main idea is to avoid placing every system on one single network. Instead, the environment is separated into different zones so that systems can be grouped by purpose and trust level. This makes the lab more realistic and supports safer testing, better organization, and clearer future monitoring workflows.
 
 At the center of the design is `FW-EDGE01` (pfSense), which acts as the main routing and control point between the lab networks.
 
@@ -73,7 +73,7 @@ Rather than allowing systems to move freely between segments, pfSense is intende
 
 This architecture was chosen to support several goals:
 
-- build a more realistic homelab
+- build a realistic homelab
 - practice segmentation instead of using one flat network
 - separate trusted and vulnerable systems
 - prepare for future logging, monitoring, and investigation workflows
