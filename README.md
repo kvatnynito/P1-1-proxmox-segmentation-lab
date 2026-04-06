@@ -21,7 +21,22 @@ Architecture, workflows, and security controls are accurate, but specific values
 
 ## Current Progress
 
-> Status: Architecture and documentation are complete; infrastructure implementation begins with pfSense deployment.
+## Current Progress
+
+> Status: Week 1 complete. Proxmox bridge layout is in place and the pfSense VM has been deployed with interfaces assigned for WAN, LAN1, and LAN2.
+>
+> Completed:
+> - Proxmox bridge design documented
+> - pfSense VM created in Proxmox
+> - Interface mapping established:
+>   - WAN -> vmbr0
+>   - LAN1 -> vmbr1
+>   - LAN2 -> vmbr2
+>
+> Next:
+> - Confirm web UI access
+> - Validate interface behavior
+> - Configure DHCP scopes for LAN1 and LAN2
 
 
 ## Network Diagram
