@@ -115,6 +115,7 @@ I treat **LAN1** as the “production-like” environment where identity, endpoi
 Full list: [VM Inventory](docs/vm-inventory.md)
 
 ## Firewall Policy (Planned / Target State)
+These policies represent the intended enforcement model. Rule implementation and validation will be documented after pfSense web UI access and interface testing are completed.
 **Default stance:** deny-by-default between LANs; allow only what is required.
 
 Example rules:
