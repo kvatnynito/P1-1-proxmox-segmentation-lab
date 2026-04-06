@@ -163,8 +163,6 @@ Planned documentation + screenshots:
 ![pfSense interfaces](screenshots/pfsense-console-interfaces.png)
 
 
-- VM list: `screenshots/vm-list.png`
-
 ## Build Sequence (High Level)
 1. Create Proxmox bridges: vmbr0 (WAN), vmbr1 (LAN1), vmbr2 (LAN2)
 2. Deploy pfSense VM with 3 NICs mapped to those bridges
