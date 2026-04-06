@@ -146,12 +146,19 @@ Planned documentation + screenshots:
 - `screenshots/pfsense-firewall-rules.png`
 
 ## Current Evidence (Screenshots)
-- Proxmox bridge layout
+### Proxmox bridge layout:
 ![Proxmox bridge layout](screenshots/proxmox-bridges.png)
 
-- pfSense interfaces: `screenshots/pfsense-interfaces.png`
-- Firewall rules: `screenshots/pfsense-firewall-rules.png`
-- NAT: `screenshots/pfsense-nat.png`
+### pfSense Installation:
+  
+![pfSense installation begin](screenshots/pfsense-install-begin.png)
+![pfSense installation complete](screenshots/pfsense-install-complete.png)
+
+### pfSense interfaces:
+  
+![pfSense interfaces](screenshots/pfsense-console-interfaces.png)
+
+
 - VM list: `screenshots/vm-list.png`
 
 ## Build Sequence (High Level)
