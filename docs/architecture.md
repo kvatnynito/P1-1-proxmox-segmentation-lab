@@ -8,6 +8,8 @@ The main idea is to avoid placing every system on one single network. Instead, t
 
 At the center of the design is `FW-EDGE01` (pfSense), which acts as the main routing and control point between the lab networks.
 
+![Network diagram](../diagrams/repo1-network-diagram.png)
+
 ---
 
 ## Core Design
