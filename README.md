@@ -146,20 +146,18 @@ Planned documentation + screenshots:
 - `screenshots/pfsense-firewall-rules.png`
 
 ## Current Evidence (Screenshots)
-### Proxmox bridge layout:
+
+### Proxmox Bridge Layout
 ![Proxmox bridge layout](screenshots/proxmox-bridges.png)
 
-### pfSense installation:
-  
+### pfSense Installation
 ![pfSense installation begin](screenshots/pfsense-install-begin.png)
 ![pfSense installation complete](screenshots/pfsense-install-complete.png)
 
-### pfSense interface assignment
-
+### pfSense Interface Assignment
 ![pfSense interface assignment](screenshots/pfsense-interface-assignment.png)
 
-### pfSense interfaces:
-  
+### pfSense Console Interfaces
 ![pfSense interfaces](screenshots/pfsense-console-interfaces.png)
 
 
