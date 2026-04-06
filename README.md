@@ -51,7 +51,7 @@ Architecture, workflows, and security controls are accurate, but specific values
 - [ ] Week 5: Splunk deployment
 
 ## Network Diagram
-![Network diagram](screenshots/proxmox-network-diagram.png)
+![Network diagram](diagrams/repo1-network-diagram.png)
 
 **Design intent:** `FW-EDGE01` (pfSense) provides WAN access and acts as the central routing and segmentation point between **LAN1 (enterprise / blue-team)** and **LAN2 (vulnerable / testing)**.
 
