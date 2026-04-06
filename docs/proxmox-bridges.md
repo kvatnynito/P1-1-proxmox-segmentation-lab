@@ -1,8 +1,13 @@
 ## Proxmox Network Bridges
 
-To support network segmentation, this lab uses multiple Proxmox bridges to simulate separate network zones.
+This lab uses multiple Proxmox bridges to enforce segmentation between lab zones. The bridge layout below is the configuration currently implemented in the environment.
 
-This file answers the question: how it should be configured.
+## Implementation Status
+Completed in Proxmox:
+- vmbr0 created for WAN/uplink
+- vmbr1 created for Enterprise LAN
+- vmbr2 created for Vulnerable LAN
+- pfSense connected to all three bridges using three virtual NICs
 
 ### vmbr0 (WAN)
 - Connected to home router
