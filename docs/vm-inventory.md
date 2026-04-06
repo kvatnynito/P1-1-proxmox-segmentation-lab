@@ -1,70 +1,116 @@
 # VM Inventory
 
-This document tracks the virtual machine inventory for the Proxmox Segmentation Lab.
+This document tracks the virtual machine inventory for the Proxmox Segmentation Lab. This includes current deployment status, intended network placement, and its role within the environment.
+
+---
 
 ## Current Deployment Status
 
-### Deployed
-- **FW-EDGE01** — pfSense edge firewall/router
+### Deployed in Week 1
+
+#### FW-EDGE01
+- **Role:** pfSense edge firewall/router
+- **Status:** Deployed
+- **Network placement:**
   - NIC1 → `vmbr0` (WAN)
   - NIC2 → `vmbr1` (LAN1 Enterprise)
   - NIC3 → `vmbr2` (LAN2 Vulnerable)
+- **Notes:** Primary routing and segmentation point between WAN, LAN1, and LAN2.
 
-### Planned
-The following systems are part of the intended lab design and will be deployed in later build phases.
+### Deployed in Week 2
 
----
+#### AD-WIN10
+- **Role:** Windows 10 enterprise workstation
+- **Status:** Deployed
+- **Network placement:**
+  - NIC1 → `vmbr1` (LAN1 Enterprise)
+- **IP assignment:** DHCP from pfSense LAN1
+- **Notes:** First internal Windows endpoint used to validate LAN1 connectivity, DHCP, and future domain/telemetry workflows.
 
-## Edge Router
-
-- **FW-EDGE01** — pfSense edge firewall/router  
-  **Role:** Routes traffic between WAN, LAN1, and LAN2 while enforcing segmentation and firewall policy.  
-  **Network placement:**
-  - NIC1 → `vmbr0` (WAN)
-  - NIC2 → `vmbr1` (LAN1 Enterprise)
-  - NIC3 → `vmbr2` (LAN2 Vulnerable)
-
----
-
-## LAN1 — Enterprise / Blue Team (Production-like Zone)
-
-- **AD-DC01** *(Windows Server)* — Domain Services, DNS  
-  **Why it’s included:** I wanted a realistic enterprise identity backbone for domain authentication, DNS, and policy-driven testing.
-
-- **AD-WIN10 / AD-WIN11** *(Domain-joined endpoints)* — User workstations  
-  **Why it’s included:** These are my “real user” machines to generate authentic endpoint activity for monitoring and investigations, including logons, process execution, PowerShell activity, and Sysmon/WEF telemetry.
-
-- **AD-FS01** *(File Server — optional but recommended)* — SMB shares, NTFS permissions  
-  **Why it’s included:** File servers create the kind of everyday east-west traffic enterprises actually have, and they’re useful for access auditing scenarios such as SMB authentication, share access, and permission changes.
-
-- **SIEM-SPLUNK01** *(Splunk Free — optional)*  
-  **Why it’s included:** I use this to centralize logs and practice investigation workflows such as searching, filtering, pivoting, and repeatable triage.
-
-- **SEC-KALI01** *(Attacker simulation — optional)*  
-  **Why it’s included:** This gives me a controlled way to generate adversary-like activity so I can validate segmentation rules and detection coverage without touching anything outside the lab.
+### Planned for Later Phases
 
 ---
 
-## LAN2 — Vulnerable / Testing (Intentionally Insecure Zone)
+## LAN1 — Enterprise / Blue Team Zone
 
-- **VULN-METASPLOITABLE2**  
-  **Why it’s included:** It’s a consistent, repeatable vulnerable target that lets me test segmentation controls and generate known-bad telemetry.
+#### AD-DC01
+- **Role:** Active Directory Domain Controller, DNS
+- **Status:** Planned
+- **Network placement:**
+  - NIC1 → `vmbr1` (LAN1 Enterprise)
+- **Notes:** Provides domain services, authentication, DNS, and future Group Policy support.
 
-- **VULN-DVWA / WebGoat**  
-  **Why it’s included:** These provide web application attack practice targets so I can generate realistic web attack signals and evaluate logging and detection visibility.
+#### AD-WIN11
+- **Role:** Windows 11 enterprise workstation
+- **Status:** Planned
+- **Network placement:**
+  - NIC1 → `vmbr1` (LAN1 Enterprise)
+- **Notes:** Secondary domain-joined endpoint for user activity simulation and telemetry generation.
 
-- **VULN-WIN2019** *(Unpatched)*  
-  **Why it’s included:** I wanted a Windows target that supports exploitation and lateral movement practice while giving me Windows event and Sysmon investigation opportunities.
+#### AD-FS01
+- **Role:** File server
+- **Status:** Planned
+- **Network placement:**
+  - NIC1 → `vmbr1` (LAN1 Enterprise)
+- **Notes:** Intended for SMB share testing, file access activity, and access control scenarios.
 
-- **VULN-OPENVAS** *(Scanner)*  
-  **Why it’s included:** This supports a vulnerability management workflow: scan, review findings, remediate, and rescan to confirm improvements.
+#### SIEM-SPLUNK01
+- **Role:** Splunk server
+- **Status:** Planned
+- **Network placement:**
+  - NIC1 → `vmbr1` (LAN1 Enterprise)
+- **Notes:** Intended for centralized log search, triage, and detection workflows.
 
-- **VULN-UBU-OLD** *(Outdated Linux)*  
-  **Why it’s included:** I use an intentionally outdated Linux system to simulate legacy risk and test hardening gaps and detection visibility.
+#### SEC-KALI01
+- **Role:** Attacker simulation system
+- **Status:** Planned
+- **Network placement:**
+  - NIC1 → `vmbr1` (LAN1 Enterprise) or dual-homed later as needed
+- **Notes:** Used to generate controlled attacker activity for validation and testing.
 
 ---
 
-## Notes
-- **FW-EDGE01** is currently deployed.
-- Remaining systems listed here are planned as part of the lab roadmap for Repo 1.
-- Inventory may be adjusted during implementation based on system resources and lab priorities.
+## LAN2 — Vulnerable / Testing Zone
+
+#### VULN-METASPLOITABLE2
+- **Role:** Intentionally vulnerable Linux target
+- **Status:** Planned
+- **Network placement:**
+  - NIC1 → `vmbr2` (LAN2 Vulnerable)
+- **Notes:** Used for exploitation, segmentation validation, and known-bad telemetry generation.
+
+#### VULN-DVWA
+- **Role:** Deliberately vulnerable web application target
+- **Status:** Planned
+- **Network placement:**
+  - NIC1 → `vmbr2` (LAN2 Vulnerable)
+- **Notes:** Used for web attack testing and logging visibility validation.
+
+#### VULN-WIN2019
+- **Role:** Intentionally unpatched Windows Server target
+- **Status:** Planned
+- **Network placement:**
+  - NIC1 → `vmbr2` (LAN2 Vulnerable)
+- **Notes:** Used for Windows exploitation, lateral movement simulation, and event analysis.
+
+#### VULN-OPENVAS
+- **Role:** Vulnerability scanner
+- **Status:** Planned
+- **Network placement:**
+  - NIC1 → `vmbr2` (LAN2 Vulnerable)
+- **Notes:** Used for scan / remediate / rescan workflow testing.
+
+#### VULN-UBU-OLD
+- **Role:** Outdated Linux target
+- **Status:** Planned
+- **Network placement:**
+  - NIC1 → `vmbr2` (LAN2 Vulnerable)
+- **Notes:** Used to simulate legacy Linux risk and misconfiguration scenarios.
+
+---
+
+## Overall Notes
+- `FW-EDGE01` is the only system currently deployed in the lab.
+- `AD-WIN10` is the first deployed internal endpoint for Week 2 validation.
+- Additional systems will be deployed in later phases as the lab build progresses.
+- Inventory entries may be refined as implementation details change.
