@@ -21,8 +21,6 @@ Architecture, workflows, and security controls are accurate, but specific values
 
 ## Current Progress
 
-## Current Progress
-
 > Status: Week 1 complete. Proxmox bridge layout is in place and the pfSense VM has been deployed with interfaces assigned for WAN, LAN1, and LAN2.
 >
 > Completed:
@@ -37,6 +35,14 @@ Architecture, workflows, and security controls are accurate, but specific values
 > - Confirm web UI access
 > - Validate interface behavior
 > - Configure DHCP scopes for LAN1 and LAN2
+
+## Milestone Tracker
+
+- [x] Week 1: pfSense VM deployed
+- [ ] Week 2: WAN/LAN validation + web UI access + DHCP
+- [ ] Week 3: First Windows VM connected to LAN1
+- [ ] Week 4: Kali + vulnerable VM base connectivity
+- [ ] Week 5: Splunk deployment
 
 
 ## Network Diagram
