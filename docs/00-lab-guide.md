@@ -12,7 +12,7 @@ At this stage, the Proxmox bridge layout and pfSense deployment are already in p
 
 ---
 
-## Recommended Build Order
+## Build Order
 
 ## Phase 1 — Infrastructure Setup
 
@@ -95,4 +95,4 @@ For each phase:
 3. capture screenshots or evidence  
 4. update the related documentation  
 
-This keeps the repository accurate as the lab evolves.
+This is to ensure the repository stays accurate as the lab progresses.
