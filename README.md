@@ -145,7 +145,7 @@ Planned documentation + screenshots:
 [Firewall Policy](docs/firewall-policy.md)
 - `screenshots/pfsense-firewall-rules.png`
 
-## Planned Evidence (Screenshots)
+## Current Evidence (Screenshots)
 - Proxmox bridges: `screenshots/proxmox-bridges.png`
 - pfSense interfaces: `screenshots/pfsense-interfaces.png`
 - Firewall rules: `screenshots/pfsense-firewall-rules.png`
