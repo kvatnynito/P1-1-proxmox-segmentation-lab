@@ -1,2 +1,2 @@
-### Status
-This diagram represents the intended segmentation design. Implementation is currently in progress and will be validated through pfSense deployment and firewall rule enforcement.
+## Diagram Status
+Week 1 diagram is complete. It shows the planned segmented architecture with pfSense routing between WAN, LAN1, and LAN2. Future revisions will add deployed VMs and confirmed traffic paths as the lab build progresses.
