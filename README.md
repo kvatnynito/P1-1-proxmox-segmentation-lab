@@ -22,30 +22,28 @@ Architecture, workflows, and security controls are accurate, but specific values
 
 ## Current Progress
 
-> **Status:** Week 2 in progress.  
-> Proxmox bridge layout is implemented, and `FW-EDGE01` has been deployed with interfaces assigned for WAN, LAN1, and LAN2.
+> Status: Week 2 complete. pfSense is deployed, reachable through the web UI, and providing initial LAN services for the segmented lab.
 >
-> **Completed:**
+> Completed:
 > - Proxmox bridge design documented
 > - pfSense VM created in Proxmox
 > - Interface mapping established:
->   - WAN → `vmbr0`
->   - LAN1 → `vmbr1`
->   - LAN2 → `vmbr2`
-> - Initial LAN addressing documented:
->   - `10.10.10.1/24`
->   - `10.20.20.1/24`
+>   - WAN -> vmbr0
+>   - LAN1 -> vmbr1
+>   - LAN2 -> vmbr2
+> - Web UI access confirmed
+> - Interface behavior validated
+> - DHCP configured for LAN1 and LAN2
 >
-> **Week 2 focus:**
-> - Confirm pfSense web UI access
-> - Validate interface behavior
-> - Configure DHCP scopes for LAN1 and LAN2
-> - Prepare first internal endpoint validation on LAN1
+> Next:
+> - Deploy first internal VM to LAN1
+> - Validate client addressing and connectivity through pfSense
+> - Begin Week 3 internal network build
 
 ## Milestone Tracker
 
 - [x] Week 1: Proxmox bridges and pfSense deployment
-- [ ] Week 2: WAN/LAN validation, web UI access, and DHCP
+- [x] Week 2: WAN/LAN validation, web UI access, and DHCP
 - [ ] Week 3: First Windows VM connected to LAN1
 - [ ] Week 4: Kali and vulnerable VM base connectivity
 - [ ] Week 5: Splunk deployment
