@@ -10,22 +10,30 @@ This document tracks the virtual machine inventory for the Proxmox Segmentation 
 
 #### FW-EDGE01
 - **Role:** pfSense edge firewall/router
-- **Status:** Deployed
+- **Status:** Deployed and operational
 - **Network placement:**
   - NIC1 → `vmbr0` (WAN)
   - NIC2 → `vmbr1` (LAN1 Enterprise)
   - NIC3 → `vmbr2` (LAN2 Vulnerable)
-- **Notes:** Primary routing and segmentation point between WAN, LAN1, and LAN2.
+- **Notes:** Primary routing and segmentation point between WAN, LAN1, and LAN2. Web UI access validated and DHCP configured for LAN1 and LAN2.
 
 ### Deployed in Week 2
 
 #### AD-WIN10
 - **Role:** Windows 10 enterprise workstation
-- **Status:** Deployed
+- **Status:** Deployed for internal endpoint validation
 - **Network placement:**
   - NIC1 → `vmbr1` (LAN1 Enterprise)
-- **IP assignment:** DHCP from pfSense LAN1
-- **Notes:** First internal Windows endpoint used to validate LAN1 connectivity, DHCP, and future domain/telemetry workflows.
+- **Notes:** First deployed internal endpoint, used to validate LAN1 connectivity, pfSense Web UI access, and DHCP behavior.
+
+#### TEST-WIN10-LAN2
+- **Role:** Windows 10 validation endpoint
+- **Status:** Deployed for LAN2 validation
+- **Network placement:**
+  - NIC1 → `vmbr2` (LAN2 Vulnerable)
+- **Notes:** Used to validate DHCP assignment and basic connectivity on the LAN2 / vulnerable segment.
+
+### Planned for Later Phases
 
 ### Planned for Later Phases
 
@@ -109,8 +117,6 @@ This document tracks the virtual machine inventory for the Proxmox Segmentation 
 
 ---
 
-## Overall Notes
-- `FW-EDGE01` is the only system currently deployed in the lab.
-- `AD-WIN10` is the first deployed internal endpoint for Week 2 validation.
-- Additional systems will be deployed in later phases as the lab build progresses.
-- Inventory entries may be refined as implementation details change.
+- `FW-EDGE01` was deployed in Week 1 and is operational as the lab edge firewall/router.
+- `AD-WIN10` is the first deployed internal endpoint for Week 2 validation on LAN1.
+- `TEST-WIN10-LAN2` was deployed for LAN2 validation during Week 2.
