@@ -109,6 +109,11 @@ Planned documentation:
 ### pfSense Console Interfaces
 ![pfSense interfaces](screenshots/pfsense-console-interfaces.png)
 
+### pfSense Web UI and DHCP Validation
+![pfSense Web UI dashboard](screenshots/pfsense-webui-dashboard-LAN1.png)
+![pfSense DHCP enabled on LAN1](screenshots/pfsense-webui-dhcp-enabled-LAN1.png)
+![AD-WIN10 DHCP lease validation](screenshots/ad-win10-ipconfig-dhcp-lease-test-LAN1.png)
+
 ## Build Sequence (High Level)
 1. Create Proxmox bridges: `vmbr0` (WAN), `vmbr1` (LAN1), `vmbr2` (LAN2)
 2. Deploy pfSense VM with 3 NICs mapped to those bridges
