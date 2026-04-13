@@ -34,3 +34,5 @@ FW-EDGE01 serves as the lab’s edge firewall/router and enforces segmentation b
 ![pfSense installation complete](../screenshots/pfsense-install-complete.png)
 ![pfSense interface assignment](../screenshots/pfsense-interface-assignment.png)
 ![pfSense console interfaces](../screenshots/pfsense-console-interfaces.png)
+
+![pfSense webUI LAN1 dhcp pool](..screenshots/pfsense-webui-dhcp-pool-LAN1.png)
