@@ -17,3 +17,13 @@
 ## Issues / Lessons Learned
 - Need to verify WebConfigurator access from the correct network path.
 - DHCP configuration should be done only after confirming the intended subnet/gateway design.
+
+## 2026-04-13 - Week 2 pfSense validation completed
+- Confirmed pfSense WebConfigurator access from the internal network
+- Validated WAN, LAN1, and LAN2 interface behavior
+- Configured DHCP scopes for LAN1 and LAN2
+- Confirmed pfSense is ready to support internal VM deployment
+
+## Lessons Learned
+- Interface assignment and console verification are useful before relying on web UI configuration
+- DHCP configuration should align with the documented IP plan to keep later VM deployment consistent
