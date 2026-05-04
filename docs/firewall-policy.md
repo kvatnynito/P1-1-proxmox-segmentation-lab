@@ -1,9 +1,9 @@
 # Firewall Policy
 
 ## Status
-Planned for the lab build.
+Partially validated during early lab milestones.
 
-This document explains how traffic is intended to move between the different parts of the lab once firewall rules are fully configured in pfSense.
+This document explains how traffic is intended to move between the different parts of the lab as firewall rules continue to be implemented and documented in pfSense.
 
 ---
 
@@ -30,6 +30,7 @@ This is where systems like the following are expected to live:
 - user workstations
 - monitoring tools
 - file server
+- SIEM server
 
 ### LAN2
 This is the testing and vulnerable side of the lab.
@@ -38,6 +39,7 @@ This network is meant for systems that are intentionally less secure, such as:
 - vulnerable machines
 - testing targets
 - scanning tools
+- attacker simulation systems
 
 Because of that, this side should not be trusted the same way as LAN1.
 
@@ -52,6 +54,20 @@ The main idea is simple:
 - communication between networks should only happen when there is a reason for it
 
 In other words, the lab should not allow open communication everywhere by default.
+
+---
+
+## Current Observed Behavior
+
+The following behavior has already been observed during early lab milestones:
+
+- pfSense is providing gateway services for both LAN1 and LAN2
+- DHCP services are active for internal client validation
+- LAN1 systems were able to reach pfSense and external resources as expected
+- LAN2 systems were able to communicate with each other inside the vulnerable segment
+- LAN2 remains intentionally less trusted and is treated as an isolated segment unless specific access is later required
+
+This means the segmented design is already functioning at a basic level, even though the full firewall rule set is still being documented.
 
 ---
 
@@ -84,7 +100,7 @@ In other words, the lab should not allow open communication everywhere by defaul
 ### LAN1 to WAN
 Devices on the enterprise side should be allowed to reach outward when needed.
 
-This would support things like:
+This supports things like:
 - updates
 - downloads
 - package installs
@@ -113,7 +129,7 @@ The idea is that access should be intentional, not automatic.
 
 ---
 
-## Why is this implemented
+## Why this is implemented
 
 This policy helps the lab feel more like a real environment.
 
@@ -130,16 +146,22 @@ That makes it easier to practice:
 
 ---
 
-## Milestone 2 Relevance
+## Milestone Relevance
 
-For Week 2, this policy is still the intended design rather than a fully tested final state.
+In the early milestones, this policy served as both a design goal and a validation checkpoint.
 
-Right now, the focus is on:
-- confirming pfSense is connected to the correct networks
-- validating the internal network setup
-- preparing for DHCP and endpoint testing
+Initial milestones focused on:
+- confirming pfSense was connected to the correct networks
+- validating internal network setup
+- enabling DHCP and endpoint testing
+- confirming that LAN1 and LAN2 behaved as separate segments
 
-Firewall rule testing will come after the base network setup is working.
+Later milestones will continue building on this by documenting:
+- actual firewall rules created in pfSense
+- screenshots of those rules
+- examples of what was allowed
+- examples of what was blocked
+- notes from testing between LAN1 and LAN2
 
 ---
 
