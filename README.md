@@ -125,8 +125,11 @@ Planned documentation:
 ![AD-DC01 connectivity tests](screenshots/ad-dc01-connectivity-tests.png)
 
 ### Week 4 - LAN2 Attack Lab Base
+Kali receives an IP from pfSense DHCP - 10.20.20.x
 ![ATTACK-KALI01 network configuration](screenshots/attack-kali01-network.png)
+Metasploitable2 receives an IP from pfSense DHCP - 10.20.20.x
 ![VULN-METASPLOITABLE2 network configuration](screenshots/vuln-metasploitable2-network.png)
+
 ![LAN2 communication validation](screenshots/lan2-kali-metasploitable-connectivity.png)
 
 ### Week 5 - Splunk Deployment
