@@ -47,11 +47,11 @@ Architecture, workflows, and security controls are accurate, but specific values
 
 ## Milestone Tracker
 
-- [x] Week 1: Proxmox bridges and pfSense deployment
-- [x] Week 2: WAN/LAN validation, web UI access, and DHCP
-- [x] Week 3: First Windows VM connected to LAN1
-- [x] Week 4: Kali and vulnerable VM base connectivity
-- [x] Week 5: Splunk deployment
+- [x] Milestone 1: Proxmox bridges and pfSense deployment
+- [x] Milestone 2: WAN/LAN validation, web UI access, and DHCP
+- [x] Milestone 3: First Windows VM connected to LAN1
+- [x] Milestone 4: Kali and vulnerable VM base connectivity
+- [x] Milestone 5: Splunk deployment
 
 ## Network Diagram
 ![Network diagram](diagrams/repo1-network-diagram.png)
@@ -101,30 +101,37 @@ Planned documentation:
 
 ## Current Evidence
 
-### Proxmox Bridge Layout
+### Milesstone 1 - Proxmox bridges and pfSense deployment
+Proxmox Bridge Layout
 ![Proxmox bridge layout](screenshots/proxmox-bridges.png)
 
-### pfSense Installation
+pfSense Installation
+
 ![pfSense installation begin](screenshots/pfsense-install-begin.png)
+
 ![pfSense installation complete](screenshots/pfsense-install-complete.png)
 
-### pfSense Interface Assignment
+pfSense Interface Assignment
+
 ![pfSense interface assignment](screenshots/pfsense-interface-assignment.png)
 
-### pfSense Console Interfaces
+pfSense Console Interfaces
+
 ![pfSense interfaces](screenshots/pfsense-console-interfaces.png)
 
-### pfSense Web UI and DHCP Validation
+### Milestone 2: WAN/LAN validation, web UI access, and DHCP
+pfSense Web UI and DHCP Validation
+
 ![pfSense Web UI dashboard](screenshots/pfsense-webui-dashboard-LAN1.png)
 ![pfSense DHCP enabled on LAN1](screenshots/pfsense-webui-dhcp-enabled-LAN1.png)
 ![AD-WIN10 DHCP lease validation](screenshots/ad-win10-ipconfig-dhcp-lease-test-LAN1.png)
 
-### Week 3 - AD-DC01 Deployment and Connectivity
+### Milestone 3 - AD-DC01 Deployment and Connectivity
 ![AD-DC01 static IP configuration](screenshots/ad-dc01-static-ip-configuration.png)
 ![AD-DC01 ipconfig](screenshots/ad-dc01-ipconfig-all.png)
 ![AD-DC01 connectivity tests](screenshots/ad-dc01-connectivity-tests.png)
 
-### Week 4 - LAN2 Attack Lab Base
+### Milestone 4 - LAN2 Attack Lab Base
 Kali receives an IP from pfSense DHCP - 10.20.20.x
 ![ATTACK-KALI01 network configuration](screenshots/attack-kali01-network.png)
 Metasploitable2 receives an IP from pfSense DHCP - 10.20.20.x
@@ -132,7 +139,7 @@ Metasploitable2 receives an IP from pfSense DHCP - 10.20.20.x
 
 ![LAN2 communication validation](screenshots/lan2-kali-metasploitable-connectivity.png)
 
-### Week 5 - Splunk Deployment
+### Milestone 5 - Splunk Deployment
 ![SIEM-SPLUNK01 static IP configuration](screenshots/siem-splunk01-static-ip.png)
 ![Splunk installation and startup](screenshots/siem-splunk01-splunk-install.png)
 ![Splunk Web UI](screenshots/siem-splunk01-web-ui.png)
