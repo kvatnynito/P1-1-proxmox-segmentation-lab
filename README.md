@@ -120,7 +120,7 @@ Planned documentation:
 ![AD-WIN10 DHCP lease validation](screenshots/ad-win10-ipconfig-dhcp-lease-test-LAN1.png)
 
 ### Week 3 - AD-DC01 Deployment and Connectivity
-![AD-DC01 static IP configuration](screenshots/ad-dc01-static-ip-config.png)
+![AD-DC01 static IP configuration](screenshots/ad-dc01-static-ip-configuration.png)
 ![AD-DC01 ipconfig](screenshots/ad-dc01-ipconfig-all.png)
 ![AD-DC01 connectivity tests](screenshots/ad-dc01-connectivity-tests.png)
 
