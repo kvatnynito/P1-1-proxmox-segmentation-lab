@@ -67,11 +67,12 @@ This bridge design supports:
 
 ---
 
-## Week 2 Relevance
+## Milestone Relevance
 
-For Week 2, these bridges provide the required network foundation for:
+These bridges provide the required network foundation for the current lab design, including:
 
-- validating pfSense interface assignments
-- enabling DHCP-backed internal connectivity
-- placing the first Windows endpoint on `vmbr1`
-- preparing for later segmentation and firewall-rule testing
+- pfSense interface assignments across all three zones
+- DHCP-backed internal connectivity
+- enterprise-side systems on `vmbr1`
+- vulnerable and attack-side systems on `vmbr2`
+- later segmentation, firewall validation, and monitoring workflows
