@@ -130,7 +130,7 @@ That makes it easier to practice:
 
 ---
 
-## Week 2 Relevance
+## Milestone 2 Relevance
 
 For Week 2, this policy is still the intended design rather than a fully tested final state.
 
