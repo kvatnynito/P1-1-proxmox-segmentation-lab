@@ -6,9 +6,9 @@ This guide provides the recommended build order for the Proxmox Segmentation Lab
 
 ## Current Build Stage
 
-**Current focus:** Week 2 — pfSense validation, LAN configuration, and DHCP preparation for the first internal endpoint.
+**Current focus:** Milestone 5 complete — pfSense is operational, internal enterprise and vulnerable segment systems have been deployed, and Splunk is running on LAN1.
 
-At this stage, the Proxmox bridge layout and pfSense deployment are already in place. The next goal is to validate network behavior and prepare `LAN1` for the first Windows client system.
+At this stage, the Proxmox bridge layout, pfSense deployment, internal endpoint validation, enterprise server deployment, LAN2 attack lab base, and Splunk deployment are all in place. The next goal is to begin log forwarding and ingestion validation for the next repository milestone.
 
 ---
 
@@ -33,7 +33,7 @@ Document:
 ## Phase 2 — Network Configuration
 
 ### 3. IP Addressing
-Defines the representative addressing plan for internal lab segments, including gateways, DHCP scope planning, and reserved ranges.
+Defines the representative addressing plan for internal lab segments, including gateways, DHCP scope planning, reserved ranges, and current assigned systems.
 
 Document:
 - `ip-addressing.md`
@@ -88,7 +88,7 @@ This build order helps ensure:
 
 ## Suggested Workflow
 
-For each phase:
+For each milestone:
 
 1. implement the change in Proxmox or pfSense  
 2. validate the result  
