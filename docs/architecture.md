@@ -67,7 +67,7 @@ This side is treated as a lower-trust segment and is meant to stay separate from
 
 pfSense is the central point that ties the lab together.
 
-Rather than allowing systems to move freely between segments, pfSense is intended to control how traffic moves between the networks. This supports the overall goal of segmentation and makes it possible to test both allowed and blocked traffic patterns later in the build.
+Rather than allowing systems to move freely between segments, pfSense is designed to control how traffic moves between the networks. This supports the overall goal of segmentation and makes it possible to test both allowed and blocked traffic patterns as the lab continues to develop.
 
 ---
 
@@ -90,12 +90,15 @@ In other words, this repo is not just about standing up VMs. It is about buildin
 At the current stage of the build:
 
 - Proxmox bridges have been created
-- pfSense has been deployed
+- pfSense has been deployed and validated
 - WAN, LAN1, and LAN2 have been assigned
-- internal addressing has been planned
-- DHCP and first endpoint validation are the next major steps
+- DHCP has been configured for LAN1 and LAN2
+- `AD-DC01` has been deployed on LAN1
+- `ATTACK-KALI01` and `VULN-METASPLOITABLE2` have been deployed on LAN2
+- `SIEM-SPLUNK01` has been deployed on LAN1
+- the segmented layout is now supporting both enterprise-side and vulnerable-side systems
 
-This means the architecture foundation is in place, even though the full lab is still being built out.
+This means the architecture foundation is in place and actively supporting the next stage of the lab build.
 
 ---
 
