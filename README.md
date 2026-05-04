@@ -1,5 +1,3 @@
-https://github.com/kvatnynito/Cybersecurity-Portfolio1
-
 # P1-1: Proxmox Segmentation Lab
 
 ## Overview
@@ -22,7 +20,7 @@ Architecture, workflows, and security controls are accurate, but specific values
 
 ## Current Progress
 
-> Status: Week 2 complete. pfSense is deployed, reachable through the web UI, and providing initial LAN services for the segmented lab.
+> Status: Week 5 complete. The segmented lab now includes a working pfSense edge router, an enterprise server on LAN1, an attack and vulnerable segment on LAN2, and a Splunk server on LAN1.
 >
 > Completed:
 > - Proxmox bridge design documented
@@ -34,19 +32,26 @@ Architecture, workflows, and security controls are accurate, but specific values
 > - Web UI access confirmed
 > - Interface behavior validated
 > - DHCP configured for LAN1 and LAN2
+> - `AD-DC01` deployed on LAN1 with static IP and validated connectivity
+> - `ATTACK-KALI01` deployed on LAN2
+> - `VULN-METASPLOITABLE2` deployed on LAN2
+> - LAN2 communication validated between Kali and Metasploitable
+> - `SIEM-SPLUNK01` deployed on LAN1
+> - Ubuntu Server installed and statically addressed for Splunk
+> - Splunk installed and Web UI access confirmed
 >
 > Next:
-> - Deploy first internal VM to LAN1
-> - Validate client addressing and connectivity through pfSense
-> - Begin Week 3 internal network build
+> - Begin log forwarding into Splunk
+> - Validate initial log ingestion
+> - Continue documenting screenshots and build notes for later phases
 
 ## Milestone Tracker
 
 - [x] Week 1: Proxmox bridges and pfSense deployment
 - [x] Week 2: WAN/LAN validation, web UI access, and DHCP
-- [ ] Week 3: First Windows VM connected to LAN1
-- [ ] Week 4: Kali and vulnerable VM base connectivity
-- [ ] Week 5: Splunk deployment
+- [x] Week 3: First Windows VM connected to LAN1
+- [x] Week 4: Kali and vulnerable VM base connectivity
+- [x] Week 5: Splunk deployment
 
 ## Network Diagram
 ![Network diagram](diagrams/repo1-network-diagram.png)
@@ -113,6 +118,21 @@ Planned documentation:
 ![pfSense Web UI dashboard](screenshots/pfsense-webui-dashboard-LAN1.png)
 ![pfSense DHCP enabled on LAN1](screenshots/pfsense-webui-dhcp-enabled-LAN1.png)
 ![AD-WIN10 DHCP lease validation](screenshots/ad-win10-ipconfig-dhcp-lease-test-LAN1.png)
+
+### Week 3 - AD-DC01 Deployment and Connectivity
+![AD-DC01 static IP configuration](screenshots/ad-dc01-static-ip-config.png)
+![AD-DC01 ipconfig](screenshots/ad-dc01-ipconfig-all.png)
+![AD-DC01 connectivity tests](screenshots/ad-dc01-connectivity-tests.png)
+
+### Week 4 - LAN2 Attack Lab Base
+![ATTACK-KALI01 network configuration](screenshots/attack-kali01-network.png)
+![VULN-METASPLOITABLE2 network configuration](screenshots/vuln-metasploitable2-network.png)
+![LAN2 communication validation](screenshots/lan2-kali-metasploitable-connectivity.png)
+
+### Week 5 - Splunk Deployment
+![SIEM-SPLUNK01 static IP configuration](screenshots/siem-splunk01-static-ip.png)
+![Splunk installation and startup](screenshots/siem-splunk01-splunk-install.png)
+![Splunk Web UI](screenshots/siem-splunk01-web-ui.png)
 
 ## Build Sequence (High Level)
 1. Create Proxmox bridges: `vmbr0` (WAN), `vmbr1` (LAN1), `vmbr2` (LAN2)
