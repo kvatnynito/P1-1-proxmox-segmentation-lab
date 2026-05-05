@@ -33,7 +33,7 @@ Primary goals:
 
 ## Current Task In Progress
 
-- Installing Splunk on SIEM-SPLUNK01.
+- Installing Splunk on SIEM-SPLUNK01. The VM is an Ubuntu Server host, and Splunk installation is still in progress.
 
 ## Next Safe Step
 
@@ -48,6 +48,7 @@ Primary goals:
 ## Known Blockers
 
 - Splunk installation is not yet confirmed complete.
+- Splunk has not yet been tested through the Web UI / GUI.
 - Splunk Web UI reachability is not yet confirmed.
 - pfSense syslog forwarding should not begin until Splunk is installed and reachable.
 - Windows log forwarding should not begin until Splunk is installed and reachable.
@@ -93,14 +94,16 @@ Use this section to record where work stopped.
 - Currently in the middle of Milestone 5.
 - SIEM-SPLUNK01 has Ubuntu Server installed.
 - System update/upgrade has been completed.
-- Splunk has not been fully installed or validated yet.
-- Next session should resume with Splunk installation on SIEM-SPLUNK01.
+- Splunk installation is still in progress.
+- Splunk Web UI / GUI access has not been tested yet.
+- Nothing past Splunk installation has been started.
+- Next session should resume with finishing Splunk installation on SIEM-SPLUNK01.
 
 ## Next Session Resume Point
 
 Start by confirming SIEM-SPLUNK01 is powered on, reachable, and ready for Splunk installation.
 
-Then continue with installing Splunk Enterprise and validating Splunk Web UI access.
+Then continue with finishing Splunk Enterprise installation and validating Splunk Web UI access.
 
 Do not proceed to Milestone 6 logging tasks until Splunk is installed and reachable.
 
