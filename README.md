@@ -150,7 +150,7 @@ Metasploitable2 receives an IP from pfSense DHCP - 10.20.20.x
 ### Milestone 5 - Splunk Deployment
 Splunk Enterprise was installed on `SIEM-SPLUNK01` and validated from a LAN1 Windows endpoint at `http://10.10.10.20:8000`.
 
-Screenshot evidence should use a sanitized crop that does not expose the Proxmox management URL or host network details.
+![Splunk Web UI validated from LAN1](screenshots/milestone05-splunk-webui-home.png)
 
 ## Build Sequence (High Level)
 1. Create Proxmox bridges: `vmbr0` (WAN), `vmbr1` (LAN1), `vmbr2` (LAN2)
