@@ -97,11 +97,18 @@ Use this section to record where work stopped.
 - Splunk installation is still in progress.
 - Splunk Web UI / GUI access has not been tested yet.
 - Nothing past Splunk installation has been started.
+- The next command planned for SIEM-SPLUNK01 is to search for the Splunk `.deb` installer package.
 - Next session should resume with finishing Splunk installation on SIEM-SPLUNK01.
 
 ## Next Session Resume Point
 
 Start by confirming SIEM-SPLUNK01 is powered on, reachable, and ready for Splunk installation.
+
+Then search for the Splunk installer package on SIEM-SPLUNK01:
+
+```bash
+find ~ -maxdepth 3 -iname "splunk*.deb"
+```
 
 Then continue with finishing Splunk Enterprise installation and validating Splunk Web UI access.
 

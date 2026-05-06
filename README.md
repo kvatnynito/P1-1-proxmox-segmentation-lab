@@ -20,7 +20,7 @@ Architecture, workflows, and security controls are accurate, but specific values
 
 ## Current Progress
 
-> Status: Week 5 complete. The segmented lab now includes a working pfSense edge router, an enterprise server on LAN1, an attack and vulnerable segment on LAN2, and a Splunk server on LAN1.
+> Status: Milestone 5 in progress. The segmented lab includes a working pfSense edge router, an enterprise server on LAN1, an attack and vulnerable segment on LAN2, and `SIEM-SPLUNK01` deployed on LAN1 for Splunk setup.
 >
 > Completed:
 > - Proxmox bridge design documented
@@ -37,13 +37,20 @@ Architecture, workflows, and security controls are accurate, but specific values
 > - `VULN-METASPLOITABLE2` deployed on LAN2
 > - LAN2 communication validated between Kali and Metasploitable
 > - `SIEM-SPLUNK01` deployed on LAN1
-> - Ubuntu Server installed and statically addressed for Splunk
-> - Splunk installed and Web UI access confirmed
+> - Ubuntu Server installed on `SIEM-SPLUNK01`
+> - System update/upgrade completed
+>
+> In progress:
+> - Splunk Enterprise installation on `SIEM-SPLUNK01`
+> - Splunk service startup validation
+> - Splunk Web UI reachability validation
 >
 > Next:
-> - Begin log forwarding into Splunk
-> - Validate initial log ingestion
-> - Continue documenting screenshots and build notes for later phases
+> - Confirm `SIEM-SPLUNK01` is powered on and reachable
+> - Locate the Splunk `.deb` installer package
+> - Finish Splunk Enterprise installation
+> - Validate Splunk Web UI access from LAN1
+> - Save screenshot evidence and update build notes
 
 ## Milestone Tracker
 
@@ -51,7 +58,7 @@ Architecture, workflows, and security controls are accurate, but specific values
 - [x] Milestone 2: WAN/LAN validation, web UI access, and DHCP
 - [x] Milestone 3: First Windows VM connected to LAN1
 - [x] Milestone 4: Kali and vulnerable VM base connectivity
-- [x] Milestone 5: Splunk deployment
+- [ ] Milestone 5: Splunk deployment
 
 ## Network Diagram
 ![Network diagram](diagrams/repo1-network-diagram.png)
@@ -101,7 +108,7 @@ Planned documentation:
 
 ## Current Evidence
 
-### Milesstone 1 - Proxmox bridges and pfSense deployment
+### Milestone 1 - Proxmox bridges and pfSense deployment
 Proxmox Bridge Layout
 ![Proxmox bridge layout](screenshots/proxmox-bridges.png)
 
@@ -140,9 +147,7 @@ Metasploitable2 receives an IP from pfSense DHCP - 10.20.20.x
 ![LAN2 communication validation](screenshots/lan2-kali-metasploitable-connectivity.png)
 
 ### Milestone 5 - Splunk Deployment
-![SIEM-SPLUNK01 static IP configuration](screenshots/siem-splunk01-static-ip.png)
-![Splunk installation and startup](screenshots/siem-splunk01-splunk-install.png)
-![Splunk Web UI](screenshots/siem-splunk01-web-ui.png)
+Evidence pending. Milestone 5 screenshots should be added after Splunk is installed, started, and reachable from LAN1.
 
 ## Build Sequence (High Level)
 1. Create Proxmox bridges: `vmbr0` (WAN), `vmbr1` (LAN1), `vmbr2` (LAN2)
