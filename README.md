@@ -44,14 +44,7 @@ Architecture, workflows, and security controls are accurate, but specific values
 > - Splunk boot-start enabled through `systemd`
 > - Splunk Web UI validated from LAN1 at `http://10.10.10.20:8000`
 >
-> In progress:
-> - Milestone 6 planning only; log forwarding has not started
->
-> Next:
-> - Begin Milestone 6 logging foundation
-> - Configure Splunk to receive pfSense syslog
-> - Configure pfSense to forward logs to `SIEM-SPLUNK01`
-> - Validate pfSense logs in Splunk before adding Windows forwarding
+> - P1-1 complete.
 
 ## Milestone Tracker
 
@@ -60,15 +53,10 @@ Architecture, workflows, and security controls are accurate, but specific values
 - [x] Milestone 3: First Windows VM connected to LAN1
 - [x] Milestone 4: Kali and vulnerable VM base connectivity
 - [x] Milestone 5: Splunk deployment
-- [ ] Milestone 6: LAN1 file server added
-- [ ] Milestone 7: OpenVAS scanner added
-- [ ] Milestone 8: DVWA target added
-- [ ] Milestone 9: AD-WIN11 endpoint added
-- [ ] Milestone 10: Windows Server LAN2 target added
-- [ ] Milestone 11: Optional WebGoat target added
-- [ ] Milestone 12: Optional old Ubuntu target added
 
-> Note: Centralized telemetry configuration, Windows log forwarding, WEF, Sysmon, and multi-platform ingestion validation are tracked in P1-2.
+> P1-1 ends at Milestone 5.
+>
+> Additional telemetry configuration, Windows log forwarding, WEF, Sysmon, multi-platform ingestion validation, and supporting host expansion are tracked in P1-2.
 
 ## Network Diagram
 ![Network diagram](diagrams/repo1-network-diagram.png)
@@ -171,4 +159,5 @@ Splunk Enterprise was installed on `SIEM-SPLUNK01` and validated from a LAN1 Win
 ## What’s Next
 This repo is the foundation for P1-2:
 - centralized telemetry pipelines (`WEF/Sysmon → Wazuh/Elastic/Splunk`)
+- additional telemetry-supporting hosts as needed for validation and detection workflows
 - attack simulation and investigation case files using segmented zones
