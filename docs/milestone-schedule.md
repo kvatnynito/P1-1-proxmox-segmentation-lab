@@ -803,4 +803,3 @@ Bad validation examples:
 - "Done"
 - "Installed"
 
-Use evidence, not vibes. Vibes do not survive technical interviews.
