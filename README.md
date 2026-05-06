@@ -1,5 +1,9 @@
 # P1-1: Proxmox Segmentation Lab
 
+P1-1 is part of Portfolio 1 (P1) — Lab Infrastructure, Telemetry, and Investigation Case Files
+
+**Portfolio Hub:** [Cybersecurity Portfolio 1](https://github.com/kvatnynito/Cybersecurity-Portfolio1)
+
 ## Overview
 This repo documents a segmented Proxmox homelab designed to mimic an enterprise environment. The lab uses **pfSense as the edge firewall/router** with **multiple Proxmox bridges** to separate traffic into distinct security zones (**LAN1 Enterprise** vs **LAN2 Vulnerable**), enabling realistic security testing, monitoring, and containment scenarios.
 
@@ -157,7 +161,10 @@ Splunk Enterprise was installed on `SIEM-SPLUNK01` and validated from a LAN1 Win
 5. Deploy VMs into LAN1 or LAN2 per inventory
 
 ## What’s Next
-This repo is the foundation for P1-2:
+
+This repo is the foundation for [P1-2: WEF, Sysmon, Wazuh, Elastic, and Splunk Telemetry Pipeline](https://github.com/kvatnynito/P1-2-wef-sysmon-to-wazuh-elastic-splunk):
+
 - centralized telemetry pipelines (`WEF/Sysmon → Wazuh/Elastic/Splunk`)
 - additional telemetry-supporting hosts as needed for validation and detection workflows
 - attack simulation and investigation case files using segmented zones
+
