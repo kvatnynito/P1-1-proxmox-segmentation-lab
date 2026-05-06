@@ -60,6 +60,15 @@ Architecture, workflows, and security controls are accurate, but specific values
 - [x] Milestone 3: First Windows VM connected to LAN1
 - [x] Milestone 4: Kali and vulnerable VM base connectivity
 - [x] Milestone 5: Splunk deployment
+- [ ] Milestone 6: LAN1 file server added
+- [ ] Milestone 7: OpenVAS scanner added
+- [ ] Milestone 8: DVWA target added
+- [ ] Milestone 9: AD-WIN11 endpoint added
+- [ ] Milestone 10: Windows Server LAN2 target added
+- [ ] Milestone 11: Optional WebGoat target added
+- [ ] Milestone 12: Optional old Ubuntu target added
+
+> Note: Centralized telemetry configuration, Windows log forwarding, WEF, Sysmon, and multi-platform ingestion validation are tracked in P1-2.
 
 ## Network Diagram
 ![Network diagram](diagrams/repo1-network-diagram.png)
