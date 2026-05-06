@@ -335,3 +335,32 @@ Milestone-specific artifacts should use this naming pattern:
 
 ```text
 docs/milestone-XX-topic-name.md
+```
+
+Examples:
+
+```text
+docs/milestone-05-splunk-server-setup.md
+docs/milestone-05-splunk-install-validation.md
+```
+
+---
+
+# Validation Standard
+
+Every major lab task should include proof.
+
+Good validation examples:
+
+- Ping test
+- Web UI access
+- Static IP confirmation
+- Screenshot
+- Short explanation of what the result proves
+
+Bad validation examples:
+
+- "It worked"
+- "Configured"
+- "Done"
+- "Installed"
