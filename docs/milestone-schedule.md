@@ -23,7 +23,7 @@ This file shows the intended project roadmap. For the current live stopping poin
 
 ## Current Milestone
 
-- Milestone 5 — SIEM Intro
+- Milestone 6 — Logging Foundation
 
 ## Completed Milestones
 
@@ -31,14 +31,15 @@ This file shows the intended project roadmap. For the current live stopping poin
 - Milestone 2 — pfSense Working
 - Milestone 3 — Internal LAN1 Base
 - Milestone 4 — Attack Lab Base
+- Milestone 5 — SIEM Intro
 
 ## Current Note
 
-The lab is currently in Milestone 5.
+The lab is currently ready to begin Milestone 6.
 
-SIEM-SPLUNK01 has been created and Ubuntu Server has been installed. Splunk installation and Splunk Web UI validation are still in progress.
+SIEM-SPLUNK01 has been created, Ubuntu Server has been installed, Splunk Enterprise has been installed, and Splunk Web UI access was validated from LAN1.
 
-Do not move into Milestone 6 until Splunk is installed, started, reachable through the web interface, and documented.
+Milestone 6 should focus on log ingestion. Do not add more VMs until pfSense and TEST-WIN10-LAN1 logs are visible in Splunk and documented.
 
 ---
 
@@ -211,7 +212,7 @@ Milestone 5 is complete only when:
 
 ### Status
 
-In progress.
+Completed.
 
 ---
 
@@ -802,4 +803,3 @@ Bad validation examples:
 - "Configured"
 - "Done"
 - "Installed"
-

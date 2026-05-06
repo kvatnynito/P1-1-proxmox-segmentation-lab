@@ -65,11 +65,20 @@
   - Gateway -> `10.10.10.1`
   - DNS -> `10.10.10.1`
 - Verified connectivity to pfSense, outbound IP reachability, and DNS resolution
-- Installed Splunk Enterprise on Ubuntu
-- Enabled Splunk to start at boot
-- Confirmed Splunk Web UI access from LAN1 at `http://10.10.10.20:8000`
+- Downloaded the official Splunk Enterprise 10.2.3 Linux `.deb` package directly from `SIEM-SPLUNK01` using `wget`
+- Installed Splunk Enterprise on Ubuntu using `dpkg`
+- Confirmed Splunk 10.2 rejected default root startup
+- Confirmed the `splunk` service user existed
+- Changed `/opt/splunk` ownership to `splunk:splunk`
+- Started Splunk as the `splunk` service user
+- Enabled Splunk to start at boot using a `systemd` service running as `splunk:splunk`
+- Confirmed Splunk Web UI access from TEST-WIN10-LAN1 at `http://10.10.10.20:8000`
 
 ## Lessons Learned
 - Setting a static IP before installing Splunk keeps management and later forwarding targets consistent.
 - Splunk is much easier to work with when installed on a lightweight dedicated Linux server rather than overcomplicating the operating system layer.
 - Confirming the web UI from a LAN1 client is the clearest proof that the SIEM host is operational and reachable.
+- Host-to-VM file transfer with WinSCP/SFTP was not the cleanest install path because the Windows host was outside the lab LAN1 path and pfSense segmentation blocked unsolicited access into LAN1.
+- SSH on SIEM-SPLUNK01 was installed but initially stopped; starting `ssh.service` confirmed the service worked locally, but routing and firewall placement still mattered.
+- Direct `wget` from SIEM-SPLUNK01 was the better approach because the VM already had validated outbound internet access and DNS resolution.
+- Splunk 10.2 should run as the dedicated `splunk` service user instead of root, so ownership and boot-start configuration need to match that service account.
