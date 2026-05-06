@@ -2,7 +2,7 @@
 
 ## Current Milestone
 
-- Milestone 6 — Logging Foundation
+- P1-1 completed. Continue on P1-2 (P1-2-wef-sysmon-to-wazuh-elastic-splunk).
 
 ## Completed Milestones
 
